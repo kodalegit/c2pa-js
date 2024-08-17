@@ -1,12 +1,10 @@
 import { Manifest, Assertion } from 'c2pa';
 
-export interface TrainingMiningEntry {
-  use: 'allowed' | 'notAllowed' | 'constrained';
-  constraint_info?: string;
-}
-
 export interface TrainingMiningMap {
-  [key: string]: TrainingMiningEntry;
+  [key: string]: {
+    use: 'allowed' | 'notAllowed' | 'constrained';
+    constraint_info?: string;
+  };
 }
 
 export interface TrainingMiningAssertion
